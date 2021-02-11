@@ -57,24 +57,21 @@ class LinkedList:
         current_node = self.get_head_node()
         current_node2 = self.get_head_node()
         base_node = self.get_head_node()
-        string_lst = ""
+        
 
         while current_node.get_value() != None:
-            next_node = current_node.get_link()                         ####Recursion#####
+            next_node = current_node.get_link()
             try:
                 if next_node.get_link() == None:
-                    current_node.set_link(next_node)
-                    string_lst += str(next_node.get_value()) + "\t"
+                    print(next_node.get_value())
                     current_node.set_link(None)
+                    next_node.set_link(current_node)
                     next_node = current_node2
-                    print(string_lst)
-                    string_lst = ""
+                    
                 current_node = next_node
             except AttributeError:
-                string_lst += str(base_node.get_value())
-                return string_lst
+                print(base_node.get_value())
                 break
-
 
         
 
