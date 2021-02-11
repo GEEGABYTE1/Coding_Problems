@@ -60,7 +60,7 @@ class LinkedList:
         string_lst = ""
 
         while current_node.get_value() != None:
-            next_node = current_node.get_link()
+            next_node = current_node.get_link()                         ####Recursion#####
             try:
                 if next_node.get_link() == None:
                     current_node.set_link(next_node)
