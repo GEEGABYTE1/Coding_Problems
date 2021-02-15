@@ -45,12 +45,12 @@ class LinkedList:
             self.head_node = current_node.get_link()
         else:
             while current_node:
-                next_node = current_node.get_link()
+                next_node = current_node.get_link()                                 ###Iteration only works under the while loop####
                 if next_node.get_value() == item_to_remove:
                     current_node.set_link(next_node.get_link())
                     current_node = None 
                 else:
-                    current_node = next_node 
+                    current_node = next_node                                        ### Part of Iteration ###
     
     
     def reverse_list(self):
