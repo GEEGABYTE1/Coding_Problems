@@ -25,4 +25,4 @@ Base Tree:
 Reverse Tree: 
 			1
 		      3    2
-                      6 7  5 4
+                     6 7  5 4
