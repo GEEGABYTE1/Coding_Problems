@@ -38,7 +38,7 @@ Solution to full problem coming soon!
 Made in Python 🐍
 
 
-# Refernence:
+# Reference:
 
 GeeksforGeeks 
 Link to problem: https://www.geeksforgeeks.org/generate-graph-using-dictionary-python/
