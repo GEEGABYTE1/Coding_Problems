@@ -71,7 +71,7 @@ class Prompt:
         
         print(lst)
 
-    def path(self, dictionary, start, end):
+    def path(self, dictionary, start, end):                         ### Under Dev
         lst = []
         values_to_go_to = []
         
@@ -94,44 +94,6 @@ class Prompt:
                     #if not l in lst:
                         #lst.append(l)
                 i = values_to_go_to.pop()
-
-   
-    def generate_path(self, dictionary, from_key, to_key):
-        lst = []
-        lst.append(from_key)
-        for i, j in self.graph.graph_dict.items():
-            if not to_key in j.get_edges():
-                continue 
-            else:
-                self.graph.add_edge(Vertex(i), Vertex(to_key))
-                lst.append(i)
-                lst.append(to_key)
-                break 
-        print(lst)
-        
-        lst = []
-        values_to_go_to = []
-        for i, j in self.graph.graph_dict.items():
-            values = []
-            if not i == from_key:
-                pass 
-            else:
-                if not i in lst:
-                    lst.append(i)
-                
-                for k in j.get_edges():
-                    values.append(k)
-                
-                if to_key in values:
-                    lst.append(end)
-                
-                else:
-                    for s in self.graph.graph_dict.keys():
-                        values_to_go_to.append(lst)
-                    for l in range(len(j.get_edges()), 0, -1):
-                        values_to_go_to.append(j.get_edges[l])
-                    
-                    i = values_to_go_to.pop()
                 
     
     def real_gen_path(self, dictionary, from_key, to_key):
