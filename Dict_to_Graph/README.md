@@ -33,7 +33,7 @@ This simple graph has six nodes (a-f) and five arcs:
   <img src=https://media.geeksforgeeks.org/wp-content/uploads/python1.jpg>
 
 # Extras:
-Solution to full problem coming soon! 
+
 
 Made in Python 🐍
 
