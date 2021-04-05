@@ -34,6 +34,9 @@ This simple graph has six nodes (a-f) and five arcs:
 
 # Extras:
 
+`.real_gen_path()` creates and edge to a vertex that it did not have an edge with by default (part of the problem) 
+
+*Note*: This is not the solution to full problem, rather only the first two. 
 
 Made in Python 🐍
 
