@@ -34,7 +34,9 @@ This simple graph has six nodes (a-f) and five arcs:
 
 # Extras:
 
-`.real_gen_path()` creates and edge to a vertex that it did not have an edge with by default (part of the problem) 
+`create_path()` creates and edge to a vertex that it did not have an edge with by default (part of the problem) 
+`gen_path()` prints all possible paths and prints the shortest path between two vertices 
+
 
 *Note*: This is not the solution to full problem, rather only the first two. 
 
