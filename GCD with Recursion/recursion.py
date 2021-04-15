@@ -31,7 +31,7 @@ def gcd(a, b, lst=None):
   return gcd(a, b, lst)
   
 
-print(gcd(4, 2))
+
 
 
 
