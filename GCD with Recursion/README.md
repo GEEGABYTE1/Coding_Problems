@@ -4,5 +4,5 @@ Takes two integers and finds the GCD using recursion.
 
 `test_cases.py` are example test cases.
 
-Time Complexity: 
+Time Complexity: O(N)
 
