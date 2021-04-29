@@ -8,4 +8,8 @@ Given a list of linked lists at length (k), merge them and sort them by ascendin
  # Solution 
  
  - Radix sort Algorithm was used for sorting 
- - 
+ - `.k_sorted()` was the function to merge all lists together in one. 
+
+ # Extras 
+ 
+Made in Python 🐍
