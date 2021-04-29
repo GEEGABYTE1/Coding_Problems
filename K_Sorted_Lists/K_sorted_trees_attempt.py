@@ -71,19 +71,36 @@ class Solution:
                 values.append(current_node.get_value())
             current_node = current_node.get_link()
 
-        for i in range(len(values)):
-            for idx in range(len(values) - i - 1):
-                if values[idx] < values[idx + 1]:
-                    values[idx], values[idx + 1] = values[idx + 1], values[idx]
+        max_value = max(values)
+        max_exponent = len(str(max_value))
+        being_sorted = values[:]
+
+        for exponent in range(max_exponent):
+            position = exponent + 1
+            index = -position 
+            digits = [ [] for i in range(10)]
+
+            for number in being_sorted:
+                string_number = str(number)
+                try:
+                    digit = string_number[index]
+                except IndexError:
+                    digit = 0 
+                
+                digit = int(digit)
+                digits[digit].append(number)
+                being_sorted = []
+                for numeral in digits:
+                    being_sorted.extend(numeral)
 
                 #print(values)
 
-        lst = LinkedList(values[0])
-        for i in range(len(values)):
+        lst = LinkedList(being_sorted[0])
+        for i in range(len(being_sorted)):
             if i == 0:
                 pass
             else:
-                lst.insert_node(values[i])
+                lst.insert_node(being_sorted[i])
         
         return lst.stringify_list()
 
