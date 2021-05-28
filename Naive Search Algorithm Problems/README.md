@@ -1,4 +1,4 @@
-# Problems 
+# Naive Search Problems 
 
 There are two problems including the Naive Search Algorithm. 
 
