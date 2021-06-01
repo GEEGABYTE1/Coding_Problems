@@ -13,7 +13,7 @@ My solution has a time complexity of `O(N)` and space complexity of `O(1)`
 
 *Complexities have been generalized*
 
-In the file, I have created a `TreeNode` class to establish the trees for the inputs. At the bottom of the class, there are some test inputs to initalize the two trees, and below that there is the solution. 
+In the file, I have created a `TreeNode` class to establish the trees for the inputs. At the bottom of the class, there are some test inputs to initalize the two trees, and below that there is the solution, which is a function called `solution()`. 
 
 
 # Extra Info 
