@@ -13,25 +13,7 @@ class Graph:
 
         if not self.directed:
             self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
-    
-    def traverse(self, start_vertex, end_vertex):
-        start = [start_vertex]
-        nodes = []
-        seen = {}
-        while len(start) > 0:
-            nodes.append(start[0])
-            current_vertex = start.pop()
-            seen[current_vertex] = True 
-            if current_vertex == end_vertex:
-                nodes.append(current_vertex)
-                break
-            else:
-                vertex = self.graph_dict[current_vertex]
-                next_vertices = vertex.get_edges()
-                next_vertices = [i for i in next_vertices if not i in seen]
-                start.extend(next_vertices)
-            
-        return nodes
+
 
 
     def single_direct(self):
@@ -44,11 +26,17 @@ class Graph:
 
     def path_visualizer(self, nodes, path=[], counter=0, root_element=None):
 
-        if counter == len(list(nodes.keys())):
-            return None
+        empty_lists = [i for i in list(nodes.values())]
+        empty_lists_counter = 0
+        for value in empty_lists:
+            if value == []:
+                empty_lists_counter += 1
         
-        elif len(list(nodes.keys())) == 1:
+        
+        if empty_lists_counter == len(list(nodes.values())) - 1:
             return nodes
+        elif empty_lists_counter == len(list(nodes.values())):
+            return None
             
         else:
             element = list(nodes.keys())[counter]
@@ -85,8 +73,10 @@ class Graph:
 
             if len(path) == 0:
                 pass
-            elif path[0] == path[-1] and len(path) != 1:
+            elif path[0] == path[-1] and len(path) != 1 and counter > 0:
                 return path 
+            else:
+                return 'value not found'
         
             counter += 1
             #path.append(element)
@@ -107,6 +97,12 @@ test.add_vertex(zero)
 test.add_vertex(one)
 test.add_vertex(two)
 test.add_vertex(three)
+
+
+'''test.add_edge(one, two)
+test.add_edge(two, three)'''
+
+
 
 
 # Pass case #
