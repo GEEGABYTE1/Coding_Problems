@@ -1,5 +1,5 @@
 from vertex import Vertex
-
+from quicksort import quicksort
 class Graph:
     def __init__(self, directed=False):
         self.directed = directed
@@ -13,6 +13,13 @@ class Graph:
 
         if not self.directed:
             self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
+        
+        if len(list(self.graph_dict[from_vertex.value].edges)) > 1:
+            edges = list(self.graph_dict[from_vertex.value].edges.keys())
+            quicksort(edges, 0, len(edges) - 1)
+            zeros = [0 for i in range(len(edges))]
+            new_edges = {key:value for key, value in zip(edges, zeros)}
+            self.graph_dict[from_vertex.value].edges = new_edges
 
 
 
@@ -106,11 +113,11 @@ test.add_edge(two, three)'''
 
 
 # Pass case #
-'''test.add_edge(zero, one)
 test.add_edge(zero, two)
+test.add_edge(zero, one)
 test.add_edge(one, two)
 test.add_edge(two, three)
-test.add_edge(three, one)'''
+test.add_edge(three, one)
 
 
 # Pass case #
