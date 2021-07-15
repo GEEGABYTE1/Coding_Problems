@@ -2,11 +2,7 @@
 
 Given a binary tree, find its maximum depth
 
-Input: 3
-     /   \
-    9     20
-          / \
-        15   7
+Input: 3 -> [9, 20] 20 -> [15, 7]
 
 Output: 3 
 
