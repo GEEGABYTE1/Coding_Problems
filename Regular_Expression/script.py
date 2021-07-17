@@ -56,11 +56,24 @@ class Solution:
                     try:
                         if p[i + 1] == "*":
                             letter_count = 0
+                            letters = []
+                            checker = False
+
                             for letter in s_split:
                                 if letter == p[i]:
-                                    letter_count += 1
+                                    letters.append(letter)
                             
-                            if letter_count >= 0:
+                            if len(letters) > 0:
+                                for idx in range(len(letters)):
+                                    try:
+                                        if letters[idx] == letters[idx + 1]:
+                                            checker = True 
+                                        else:
+                                            continue 
+                                    except IndexError:
+                                        break
+                            
+                            if checker >= True:
                                 new_string += p[i]
                                 new_string += '*'
                                 new_character = True 
@@ -112,4 +125,4 @@ class Solution:
 
 test = Solution()
 
-print(test.isMatch('mississippi', 'mis*is*p*'))
+print(test.isMatch('aab', 'c*a*b'))
