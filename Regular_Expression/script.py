@@ -102,16 +102,7 @@ class Solution:
 
                 elif p[i] == '.':
                     new_string += '.'
-                
-                
-                #if len(s) < len(p):
-                    #if not p[i] in s_split and p[i] != '*' and p[i] != '.' and p[i + 1] == '*':
-                            #continue
-                    #elif p[i] in s_split and p[i] != '*' and p[i] != '.' and p[i + 1] == '*':
-                        #continue 
-                    #elif p[i] == "*":
-                        #continue    
-            
+                    
         if new_string == p:
             return True 
         else:
@@ -125,4 +116,4 @@ class Solution:
 
 test = Solution()
 
-print(test.isMatch('aab', 'c*a*b'))
+
